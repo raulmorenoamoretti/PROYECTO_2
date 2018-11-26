@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cstdlib>
+#include<time.h>
+using namespace std;
+
+void SUDOKU() {
+   int array[9];
+   int array1[9] ={1,2,3,4,5,6,7,8,9};
+   srand(time(NULL));
+   for (int j = 0; j < 9; j++) {
+       for (int i = 0; i < 9; i++) {
+           cout << " + ---";
+       }
+       cout << " +";
+       cout << '\n';
+       for (int i = 0; i < 9; i++) {
+            int n =1 + rand() % (10-1);
+            array[i]= n;
+            cout << " |  " << n << " "; 
+       }
+   cout << " |";
+   cout << '\n';
+   }
+   for (int i = 0; i < 9; i++) {
+       cout << " + ---";}
+   cout << " +";
+}
+int main(){
+   SUDOKU();
+
+   return 0;
+}
